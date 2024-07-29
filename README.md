@@ -1,5 +1,7 @@
 # BigQuery To Mixpanel Job PoC
 
 ```sh
-gradle run --args="--project={projectName} --tempLocation={gcsLocation} --outputTable={targetTable}"
+gradle run --runner=DataflowRunner \
+ -Pdataflow-runner \
+ --args="--project={projectName} --tempLocation={gcsLocation} --outputTable={targetTable}"
 ```
